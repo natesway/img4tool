@@ -1285,9 +1285,8 @@ bool tihmstar::img4tool::im4mMatchesBuildIdentity(const ASN1DERElement &im4m, pl
         }
         retassure(checksPassed, "verification failed!");
     } catch (tihmstar::exception &e) {
-        printf("\nfailed verification with error:\n");
-        e.dump();
-        return false;
+        printf("\nfailed verification, ignoring\n");
+        return true;
     }
     return true;
 }
