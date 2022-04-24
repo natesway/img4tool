@@ -70,8 +70,8 @@ jobs:
           tag=$(get_latest_release $d);
           echo "Found tag: $tag"
           wget "https://github.com/tihmstar/libgeneral/releases/download/63/buildroot_ubuntu-latest.zip"
-          unzip -u "$BUILDROOT.zip"
-          rm "$BUILDROOT.zip"
+          unzip -u "buildroot_ubuntu-latest.zip"
+          rm "buildroot_ubuntu-latest.zip"
         done
         echo "moving dependencies to /"
         sudo cp -r $BUILDROOT/* /
